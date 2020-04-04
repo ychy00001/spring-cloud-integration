@@ -1,6 +1,7 @@
 package com.ychy.cloud.consumer.web;
 
 
+import com.ychy.cloud.producer.client.ProducerClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -11,6 +12,12 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RefreshScope
 public class AppController {
+
+    /**
+     * 注入Feign客户端
+     */
+    @Autowired
+    private ProducerClient producerClient;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -29,11 +36,18 @@ public class AppController {
     }
 
     /**
-     * 使用RestTemplate获取远程服务
+     * 使用Rabbon获取远程服务
      */
     @GetMapping(path = "/visitProducer")
-    public String accessProducer(){
+    public String accessProducerByRabbon(){
         return restTemplate.getForObject("http://service-producer/producer/", String.class);
     }
 
+    /**
+     * 使用Feign获取远程服务
+     */
+    @GetMapping(path = "/visitFeignProducer")
+    public String accessProducerByFeign(){
+        return producerClient.producer();
+    }
 }

@@ -17,9 +17,10 @@ public class WebConfig implements WebMvcConfigurer {
         return new RestTemplate();
     }
 
-//    /**
-//     * 修改默认负载均衡算法
-//     */
+    /**
+     * 修改默认负载均衡算法
+     * TODO 可用配置文件形式实现 查看bootstrap.properties文件
+     */
 //    @Bean
 //    public IRule randomRule(){
 //        return new RandomRule();

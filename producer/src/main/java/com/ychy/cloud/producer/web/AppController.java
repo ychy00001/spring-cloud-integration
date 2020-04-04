@@ -1,6 +1,7 @@
 package com.ychy.cloud.producer.web;
 
 
+import com.ychy.cloud.producer.api.ProducerApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RefreshScope
-public class AppController {
+public class AppController implements ProducerApi {
 
     @Value("${isTest:false}")
     private boolean isTest;
@@ -24,9 +25,13 @@ public class AppController {
         return isTest;
     }
 
-    @GetMapping(path = "/producer")
+    /**
+     * 对外暴露端口
+     * @return
+     */
+    @Override
     public String producer(){
         System.out.println("Be visited!");
-        return "visit producer";
+        return "im producer";
     }
 }

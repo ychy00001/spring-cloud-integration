@@ -1,0 +1,6 @@
+[submodule "Sentinel"]
+	path = middleware/Sentinel
+	url = git@github.com:ychy00001/Sentinel.git
+[submodule "nacos"]
+	path = middleware/nacos
+	url = git@github.com:ychy00001/nacos.git

@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  nexus:
+    container_name: nexus
+    image: sonatype/nexus3
+    volumes:
+      - "./nexus-data:/nexus-data"
+    ports:
+      - "9090:8081"
