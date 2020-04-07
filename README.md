@@ -86,3 +86,15 @@ http://localhost:8082/conf
 ```
 
 ### 熔断限流 Sentinel
+```
+// 根目录执行
+mvn clean package
+java -Dserver.port=9001 \
+-Dcsp.sentinel.dashboard.server=localhost:9001 \
+-Dproject.name=sentinel-dashboard \
+-jar target/sentinel-dashboard.jar
+```
+#### 访问
+localhost:9001
+账号：sentinel
+密码：sentinel

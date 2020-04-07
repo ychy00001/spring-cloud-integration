@@ -40,7 +40,7 @@ public class AppController {
      */
     @GetMapping(path = "/visitProducer")
     public String accessProducerByRabbon(){
-        return restTemplate.getForObject("http://service-producer/producer/", String.class);
+        return restTemplate.getForObject("http://service-producer/producer", String.class);
     }
 
     /**
