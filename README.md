@@ -25,7 +25,7 @@ cat middleware/nexus/nexus-data/admin.password
 1. 创建数据库及表 https://github.com/alibaba/nacos/blob/master/distribution/conf/nacos-mysql.sql
 2. 更application.properties文件
 ```
-### If user MySQL as datasource:
+### If use MySQL as datasource:
 spring.datasource.platform=mysql
 
 ### Count of DB:

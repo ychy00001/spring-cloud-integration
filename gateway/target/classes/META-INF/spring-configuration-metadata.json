@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "uri",
+      "type": "com.ychy.cloud.gateway.property.UriConfigurationProperty",
+      "sourceType": "com.ychy.cloud.gateway.property.UriConfigurationProperty"
+    }
+  ],
+  "properties": [
+    {
+      "name": "uri.httpbin",
+      "type": "java.lang.String",
+      "sourceType": "com.ychy.cloud.gateway.property.UriConfigurationProperty"
+    }
+  ],
+  "hints": []
+}

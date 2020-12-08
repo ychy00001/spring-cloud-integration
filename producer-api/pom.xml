@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <name>producer-api</name>
     <artifactId>producer-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <name>producer-api</name>
 
     <dependencies>
         <dependency>
